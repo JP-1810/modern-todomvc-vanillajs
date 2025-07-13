@@ -13,68 +13,45 @@
       <header class="header">
         <h1>ToDos</h1>
         <!-- New Task Input -->
-        <input class="new-todo" placeholder="What needs to be done?" autofocus />
-  
+        <input class="new-todo" data-todo="new" placeholder="What needs to be done?" autofocus />
       </header>
 
       <!-- 🟢 Main Todo List Area -->
-      <section class="main">
+      <section class="main" data-todo="main">
         <!-- Toggle All Checkbox -->
-        <input id="toggle-all" class="toggle-all" type="checkbox" />
+        <input id="toggle-all" class="toggle-all" type="checkbox" data-todo="toggle-all" />
         <label for="toggle-all">Mark all as complete</label>
 
         <!-- Todo Items Will Be Rendered Here -->
-        <ul class="todo-list">
-          <!-- ⬇️ Sample Todo Template (will be generated dynamically) -->
-          <li>
-            <div class="view">
-              <input class="toggle" type="checkbox" />
-              <label>hello</label>
-
-              <!-- 🔘 Actions: Dropdown + Delete -->
-              <div class="actions">
-                <!-- Priority Selector Dropdown -->
-                <select class="priority-selector">
-                  <option value="high">High</option>
-                  <option value="medium" selected>Medium</option>
-                  <option value="low">Low</option>
-                </select>
-
-                <!-- Delete Button -->
-                <button class="destroy"></button>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <ul class="todo-list" data-todo="list"></ul>
       </section>
 
       <!-- 🟣 Footer: Task Counter + Filters -->
-      <footer class="footer">
+      <footer class="footer" data-todo="footer">
         <!-- Task Counter -->
-        <span class="todo-count"><strong>0</strong> items left</span>
+        <span class="todo-count" data-todo="count"><strong>0</strong> items left</span>
 
         <!-- Filters (All, Active, Completed) -->
-        <ul class="filters">
+        <ul class="filters" data-todo="filters">
           <li><a href="#/" class="selected">All</a></li>
           <li><a href="#/active">Active</a></li>
           <li><a href="#/completed">Completed</a></li>
         </ul>
-<select id="priority-filter" class="priority-selector" style="margin: 10px 0; border-radius: 8px;">
-  <option value="all">All Priorities</option>
-  <option value="high">High</option>
-  <option value="medium">Medium</option>
-  <option value="low">Low</option>
-</select>
+
+        <!-- Priority Filter Dropdown -->
+        <select id="priority-filter" class="priority-selector" style="margin: 10px 0; border-radius: 8px;">
+          <option value="all">All Priorities</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
 
         <!-- Clear Completed Button -->
-        <button class="clear-completed">Clear completed</button>
+        <button class="clear-completed" data-todo="clear-completed">Clear completed</button>
       </footer>
     </section>
 
-  
-   
-
     <!-- 🔗 JavaScript -->
-    <script src="js/app.js"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>

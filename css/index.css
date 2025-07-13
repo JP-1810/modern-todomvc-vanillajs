@@ -1,7 +1,8 @@
 @charset "utf-8";
 
+/* Global styling */
 * {
-  font-family: 'Intern', sans-serif;
+  font-family: 'Inter', sans-serif;
   box-sizing: border-box;
 }
 
@@ -16,6 +17,7 @@ body {
   justify-content: center;
 }
 
+/* Main app box */
 .todoapp {
   background: #f5f9ff;
   width: 100%;
@@ -27,6 +29,7 @@ body {
   position: relative;
 }
 
+/* Heading */
 .todoapp h1 {
   font-size: 64px;
   text-align: center;
@@ -35,7 +38,7 @@ body {
   color: #3f5fb8;
 }
 
-/* Input area */
+/* Input section */
 .todo-bars {
   display: flex;
   gap: 10px;
@@ -53,9 +56,7 @@ body {
   flex: 1;
 }
 
-
-
-/* Todo list area */
+/* Todo list styling */
 .todo-list {
   list-style: none;
   padding: 0;
@@ -64,14 +65,14 @@ body {
 
 .todo-list li {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 14px 18px;
   background-color: #ffffff;
   margin-bottom: 10px;
   border-radius: 10px;
   font-size: 18px;
   border: 1px solid #d6e0f5;
+  transition: background 0.2s ease;
 }
 
 .todo-list li.completed label {
@@ -79,7 +80,21 @@ body {
   text-decoration: line-through;
 }
 
-/* Checkbox styling */
+/* Editing mode: show edit field only then */
+.todo-list li:not(.editing) .edit {
+  display: none;
+}
+
+.todo-list li.editing .edit {
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Checkbox */
 .todo-list li .toggle {
   width: 24px;
   height: 24px;
@@ -92,9 +107,18 @@ body {
   flex-grow: 1;
   color: #2f4f85;
   font-weight: 500;
+  cursor: pointer;
 }
 
-/* Actions (priority dropdown + delete) */
+/* View container (checkbox + label + actions) */
+.todo-list li .view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Actions: priority dropdown + delete */
 .todo-list li .actions {
   display: flex;
   align-items: center;
@@ -115,6 +139,7 @@ body {
   box-shadow: none;
 }
 
+/* Delete button */
 .destroy {
   background: none;
   border: none;
@@ -189,7 +214,7 @@ body {
   color: #1d3f91;
 }
 
-/* Remove default focus ring */
+/* Accessibility and UX */
 :focus {
   outline: none;
   box-shadow: none;
