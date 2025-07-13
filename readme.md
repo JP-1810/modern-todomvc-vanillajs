@@ -129,6 +129,11 @@ The final product is a fully functional, responsive, and user-friendly ToDo appl
 
 This project reflects my ability to analyze legacy code, improve functionality, and deliver clean, maintainable, and performant front-end solutions.
 
+## output 
+
+<img width="1058" height="591" alt="image" src="https://github.com/user-attachments/assets/567365a6-db3e-43e4-85c9-0b0e52b34f3b" />
+
+
 ---
 
 
