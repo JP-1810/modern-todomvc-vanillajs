@@ -1,3 +1,137 @@
+
+# TODO LIST
+
+*COMPANY* : CODTECH IT SOLUTIONS
+
+*NAME* : JAGRUTI POTHAL
+
+*INTERN ID* : CT06DG1185
+
+*DOMAIN* : SOFTWARE DEVELOPMENT 
+
+*DURATION* : 4 WEEKS
+
+*MENTOR* : NEELA SANTHOSH KUMAR
+
+#  Modern ToDoMVC - Code Refactoring & Feature Enhancement
+
+This project is a refactored and enhanced version of a minimalist JavaScript-based ToDo web application. As part of an internship task focused on **code refactoring**, **feature enhancement**, and **performance optimization**, I implemented several functional and visual upgrades to improve both the user experience and the code structure.
+
+---
+
+##  Objectives
+
+The main goals of the task were:
+
+- Refactor and clean up the existing codebase
+- Improve functionality by adding advanced task management features
+- Enhance the visual appearance for a modern, user-friendly interface
+- Maintain performance and ensure cross-browser compatibility
+
+---
+
+##  Key Enhancements Made
+
+###  1. **Priority Setting for Tasks**
+I introduced a **priority dropdown selector** that allows users to assign a priority (High, Medium, Low) to each task during creation or after. This feature was implemented by:
+
+- Extending the `TodoStore` class to store a `priority` value for each task
+- Updating the `app.js` logic to render the priority selector with the correct value
+- Ensuring that the priority is saved and updated in `localStorage` when modified
+
+The priority selector visually highlights how important each task is, helping users manage workloads more effectively.
+
+---
+
+###  2. **Filter by Priority**
+To allow better task organization, I implemented a **priority filter dropdown** in the footer. This lets users view tasks by their priority level (High, Medium, Low, or All). This feature was built by:
+
+- Adding a new `<select>` element with id `priority-filter`
+- Listening for `change` events in `app.js` to update the filter value
+- Filtering the displayed task list dynamically based on both priority and completion status
+
+This greatly improves usability for users dealing with large lists of tasks.
+
+---
+
+###  3. **Modify Task Title (In-Place Editing)**
+I enabled **double-click editing** for any task, allowing users to change its title inline. The logic includes:
+
+- Double-clicking a task label toggles it into "editing mode"
+- Pressing Enter saves the new title
+- Pressing Escape cancels editing
+- On focus out, it renders the latest task list
+
+This is handled cleanly using event delegation and maintains data integrity through `Todos.update()`.
+
+---
+
+###  4. **UI/UX Overhaul**
+To create a more appealing and modern look, I revamped the CSS. Key improvements include:
+
+- Applied a **soft blue color scheme** across the app for a calm and clean look
+- Added **rounded corners**, **soft shadows**, and **font smoothing**
+- Used the `Inter` font for a modern and readable text appearance
+- Styled elements like filter buttons, task items, and dropdowns with hover effects and visual feedback
+- Hiding the edit input field when not in use to avoid UI clutter
+
+These changes make the app visually pleasing and intuitive for users on both desktop and mobile browsers.
+
+---
+
+##  Code Refactoring Summary
+
+- Organized `app.js` logic by separating DOM operations (`App.$`) and event binding
+- Refactored repetitive rendering code into reusable methods like `App.render()` and `App.createTodoItem()`
+- Used ES6+ syntax and modular structure to enhance readability and maintainability
+- Ensured clean separation of concerns across `app.js`, `store.js`, and `helpers.js`
+
+---
+
+## 📦 Folder Structure
+
+- index.html
+- css/index.css
+- js/app.js
+- js/store.js
+- js/helpers.js
+
+
+---
+
+##  Lessons Learned
+
+This internship task helped me strengthen my understanding of:
+- Modular JavaScript application structure
+- Event delegation and DOM manipulation
+- Working with browser `localStorage`
+- Responsive UI/UX design using CSS
+- Clean code principles and maintainable architecture
+
+---
+
+## 🛠 Tech Stack
+
+- HTML5
+- CSS3 (custom styling, no frameworks)
+- JavaScript (ES6+)
+- LocalStorage API
+
+---
+
+##  Final Outcome
+
+The final product is a fully functional, responsive, and user-friendly ToDo application with:
+- Dynamic task creation and management
+- Real-time priority filtering
+- Intuitive editing and deletion
+- Polished modern UI
+
+This project reflects my ability to analyze legacy code, improve functionality, and deliver clean, maintainable, and performant front-end solutions.
+
+---
+
+
 # TodoMVC App Written in Modern Vanilla JS
 
 It seems straightforward to build reasonably complex things using only modern JavaScript these days! We can take advantage of most newer features without hacks or polyfills.
